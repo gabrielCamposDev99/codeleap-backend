@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'post_api',
     'rest_framework',
     'corsheaders',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
