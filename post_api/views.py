@@ -58,13 +58,17 @@ class PostDetail(generics.GenericAPIView):
 
     def patch(self, request, pk):
         post = self.get_post(pk)
-        if post == None:
+        if post is None:
             return Response({"status": "fail", "message": f"Post with Id: {pk} not found"}, status=status.HTTP_404_NOT_FOUND)
 
+        allowed_fields = {'title', 'content'}
+        data = {k: v for k, v in request.data.items() if k in allowed_fields}
+
+        data['updatedAt'] = datetime.now()
+
         serializer = self.serializer_class(
-            post, data=request.data, partial=True)
+            post, data=data, partial=True)
         if serializer.is_valid():
-            serializer.validated_data['updatedAt'] = datetime.now()
             serializer.save()
             return Response({"status": "success", "data": {"post": serializer.data}})
         return Response({"status": "fail", "message": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
