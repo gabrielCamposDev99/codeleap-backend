@@ -1,0 +1,258 @@
+{
+	"info": {
+		"_postman_id": "d0b41091-fd36-4edf-8736-b06e155cf166",
+		"name": "CodeLeap API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17321405"
+	},
+	"item": [
+		{
+			"name": "Paginated Post",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://www.becodemy.com",
+						"type": "text"
+					},
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "https://www.becodemy.com",
+						"type": "text"
+					},
+					{
+						"key": "Apiacesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZ@RC&F*W$%$2lkYVIvaFkBGhkCT6hWkzOqc/FEnRi%bBzvCr66CWCveFVaCvzl%Fm+oMHAhVhm-zxAqHGMEfDtLHGJHsPi-siFBCiR6WuBshDv-FjitttPfDUHQJxAuj",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						""
+					],
+					"query": [
+						{
+							"key": "search",
+							"value": "teste",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://www.becodemy.com",
+						"type": "text"
+					},
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "https://www.becodemy.com",
+						"type": "text"
+					},
+					{
+						"key": "Apiacesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZ@RC&F*W$%$2lkYVIvaFkBGhkCT6hWkzOqc/FEnRi%bBzvCr66CWCveFVaCvzl%Fm+oMHAhVhm-zxAqHGMEfDtLHGJHsPi-siFBCiR6WuBshDv-FjitttPfDUHQJxAuj",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"You'll learn how to build a CRUD API with Django\",\r\n    \"content\": \"Django REST framework is really easy to use\",\r\n    \"category\": \"Python\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/posts/id_here",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"id_here"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit post by id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://www.becodemy.com",
+						"type": "text"
+					},
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "https://www.becodemy.com",
+						"type": "text"
+					},
+					{
+						"key": "Apiacesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZ@RC&F*W$%$2lkYVIvaFkBGhkCT6hWkzOqc/FEnRi%bBzvCr66CWCveFVaCvzl%Fm+oMHAhVhm-zxAqHGMEfDtLHGJHsPi-siFBCiR6WuBshDv-FjitttPfDUHQJxAuj",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"title edited\",\r\n    \"content\": \"contect title\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/posts/id_here",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"id_here"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete post by id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://www.becodemy.com",
+						"type": "text"
+					},
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "https://www.becodemy.com",
+						"type": "text"
+					},
+					{
+						"key": "Apiacesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZ@RC&F*W$%$2lkYVIvaFkBGhkCT6hWkzOqc/FEnRi%bBzvCr66CWCveFVaCvzl%Fm+oMHAhVhm-zxAqHGMEfDtLHGJHsPi-siFBCiR6WuBshDv-FjitttPfDUHQJxAuj",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/posts/d42beaf4-dd10-4c85-b5c8-f50bd68a6e18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"d42beaf4-dd10-4c85-b5c8-f50bd68a6e18"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "https://www.becodemy.com",
+						"type": "text"
+					},
+					{
+						"key": "Access-Control-Allow-Origin",
+						"value": "https://www.becodemy.com",
+						"type": "text"
+					},
+					{
+						"key": "Apiacesstoken",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZ@RC&F*W$%$2lkYVIvaFkBGhkCT6hWkzOqc/FEnRi%bBzvCr66CWCveFVaCvzl%Fm+oMHAhVhm-zxAqHGMEfDtLHGJHsPi-siFBCiR6WuBshDv-FjitttPfDUHQJxAuj",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Title here\",\r\n    \"content\": \"contect here\",\r\n    \"username\": \"username_here\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/posts/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
