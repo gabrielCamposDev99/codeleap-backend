@@ -1,13 +1,13 @@
 from django.db import models
+import uuid
 
 class PostModel(models.Model):
-    id = models.IntegerField(primary_key=True)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     username = models.CharField(max_length=100)
-    created_datetime = models.DateTimeField()
+    created_datetime = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=255)
     content = models.TextField()
-    author_ip = models.CharField(max_length=15)
-
+    
     class Meta:
         db_table = "posts"
 
