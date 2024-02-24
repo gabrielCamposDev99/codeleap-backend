@@ -1,6 +1,6 @@
 from django.db import models
 
-class NoteModel(models.Model):
+class PostModel(models.Model):
     id = models.IntegerField(primary_key=True)
     username = models.CharField(max_length=100)
     created_datetime = models.DateTimeField()
